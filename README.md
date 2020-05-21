@@ -3,14 +3,6 @@ Classification of Dogs vs Cats Images using CNN
 
 This repository contains ipython notebook.This notebook has the code to build a CNN model which classifies the cats-vs-dogs data. First, clone the data from the repository. Using image preprocessing, images are taken in (32*32) size. And it is rescaled to 1/255 for using it into the model.
 
-model=Sequential()
-model.add(Conv2D(filters=64,kernel_size=(3,3),activation='relu',padding='same',kernel_initializer='he_uniform',input_shape=(img_width,img_height,3)))
-model.add(MaxPool2D(pool_size=(2,2),strides=2,padding='valid'))
-
-model.add(Flatten())
-model.add(Dense(units=128,activation='relu',kernel_initializer='he_uniform'))
-model.add(Dense(units=1,activation='sigmoid'))
-
 Sequential is imported from keras. 
 1 Conv2D layer is added with 64 filters each of (3*3) size and relu as activation function.
 1 MaxPool2D layer is added with pool size of (2*2) and strides 2.
